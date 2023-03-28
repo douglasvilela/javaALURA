@@ -1,16 +1,42 @@
 package conta;
 
 public class Conta {
-	private double saldo;
+
+	private float saldo;
 	private int agencia;
 	private int numero;
 	private String titular;
 
-	public double getSaldo() {
+	public void depositarValor(double valor) {
+		this.saldo += valor;
+	}
+
+	public boolean sacarValor(double valor) {
+		if (this.saldo >= valor) {
+			this.saldo -= valor;
+			return true;
+		} else {
+			System.out.println("Saldo insuficiente");
+		}
+		return false;
+	}
+	
+	
+	public boolean transferirValor(double valor, Conta destino) {
+		if (this.saldo >= valor) {
+			this.saldo -= valor;
+			destino.depositarValor(valor);
+			return true;
+		} else {
+			System.out.println("Saldo insuficiente");
+			return false;
+		} 
+	}
+	public float getSaldo() {
 		return saldo;
 	}
 
-	public void setSaldo(double saldo) {
+	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
 
@@ -38,11 +64,9 @@ public class Conta {
 		this.titular = titular;
 	}
 
-	public void depositaDinheiro(double saldo) {
-		this.saldo = saldo++;
-		
-		
-	//testando github 12
-
+	@Override
+	public String toString() {
+		return "Conta [saldo=" + saldo + ", agencia=" + agencia + ", numero=" + numero + ", titular=" + titular + "]";
 	}
+
 }
