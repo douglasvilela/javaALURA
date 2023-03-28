@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Vilela
+ *
+ */
+module bitbank {
+}
