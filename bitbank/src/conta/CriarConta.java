@@ -8,11 +8,11 @@ public class CriarConta {
 		
 		primeiraConta.setAgencia(1);
 		primeiraConta.setNumero(10);
-		primeiraConta.setSaldo(200.00);
+		primeiraConta.setSaldo(200);
 		System.out.println(primeiraConta.getSaldo());
 
 
-		primeiraConta.depositaDinheiro(100.00);
+		primeiraConta.deposita(100);
 		
 		System.out.println(primeiraConta.getSaldo());
 	}
