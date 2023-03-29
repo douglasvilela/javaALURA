@@ -9,8 +9,7 @@ public class TestaClasse {
 		paulo.setCpf("111-111-111-11");
 		paulo.setProfissao("Militar");
 		
-		
-		Conta = contaDoPa
+	
 		
 		
 	}
